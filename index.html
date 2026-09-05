@@ -1,0 +1,1189 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0cean.mp4</title>
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <style>
+        :root {
+            color-scheme: light;
+            --paper: #c9f2f4;
+            --ink: #12345b;
+            --muted: #42627f;
+            --accent: #087eb5;
+            --aqua: #62d9ec;
+            --highlight: #f7ffff;
+            --line: #8bd9e7;
+            --glass: rgba(239, 253, 255, 0.8);
+            --chrome: #dcecf2;
+            --chrome-dark: #6c9caf;
+            --window-blue: #1269a3;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            margin: 0;
+            padding: 2rem 1.25rem;
+            background:
+                linear-gradient(rgba(4, 24, 48, 0.42), rgba(4, 24, 48, 0.2)),
+                url("https://media.istockphoto.com/id/1222233279/photo/wave-formation-of-the-adriatic-sea.jpg?s=612x612&w=0&k=20&c=k8tMZCIZE_vE9hRfW_aZDbILe6khgA1Q_UMq9j-gQ4I=");
+            background-attachment: fixed;
+            background-position: center;
+            background-size: auto, cover;
+            color: var(--ink);
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.6;
+        }
+
+        .site-shell {
+            width: min(100%, 74rem);
+            min-height: calc(100vh - 4rem);
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr);
+            gap: 2rem;
+            align-items: center;
+        }
+
+        main {
+            position: relative;
+            width: 100%;
+            padding: clamp(1.5rem, 5vw, 3rem) clamp(1.25rem, 4vw, 3rem);
+            border: 0.45rem double var(--accent);
+            border-radius: 0;
+            outline: 1px solid var(--highlight);
+            outline-offset: -0.7rem;
+            background: linear-gradient(145deg, rgba(255, 255, 255, 0.86), rgba(188, 237, 246, 0.82));
+            box-shadow: 0.7rem 0.7rem 0 rgba(5, 52, 89, 0.2);
+        }
+
+        main::before {
+            content: "★ 0CEAN.MP4 ★";
+            position: absolute;
+            top: -0.9rem;
+            left: 1.25rem;
+            padding: 0.2rem 0.55rem;
+            border: 2px outset var(--chrome);
+            border-radius: 0;
+            background: var(--accent);
+            color: var(--highlight);
+            font-family: "Lucida Console", "Courier New", monospace;
+            font-size: 0.68rem;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+        }
+
+        main::after {
+            display: none;
+        }
+
+        main > p:first-child {
+            margin: 0 0 1.5rem;
+            color: var(--accent);
+            font-family: "Courier New", monospace;
+            font-size: 0.78rem;
+            font-weight: 700;
+            letter-spacing: 0.14em;
+            text-transform: none;
+        }
+
+        h1 {
+            max-width: 100%;
+            margin: 0;
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: clamp(2.25rem, 5vw, 4.5rem);
+            line-height: 0.98;
+            letter-spacing: -0.03em;
+            overflow-wrap: break-word;
+            text-shadow: 0 2px 0 var(--highlight), 0 4px 0 rgba(8, 126, 181, 0.25);
+        }
+
+        main > p:last-child {
+            max-width: 38rem;
+            margin: 2rem 0 0;
+            padding-top: 1.5rem;
+            border-top: 1px solid var(--line);
+            color: var(--muted);
+            font-size: 1.1rem;
+        }
+
+        a {
+            color: var(--ink);
+            font-weight: 700;
+            text-decoration-color: var(--accent);
+            text-decoration-thickness: 0.15em;
+            text-underline-offset: 0.18em;
+        }
+
+        a:hover,
+        a:focus-visible {
+            color: var(--accent);
+        }
+
+        .posts {
+            align-self: start;
+            position: relative;
+            min-width: 0;
+            padding: 1rem;
+            border: 0.3rem solid var(--accent);
+            border-radius: 0;
+            background: rgba(247, 255, 255, 0.72);
+            box-shadow: 0.55rem 0.55rem 0 rgba(5, 52, 89, 0.2);
+        }
+
+        .posts-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+            margin-bottom: 1rem;
+            padding: 0.3rem 0.45rem;
+            border: 2px outset var(--chrome);
+            background: var(--window-blue);
+        }
+
+        .posts::before {
+            content: "";
+            position: absolute;
+            inset: -0.55rem;
+            border: 1px dotted rgba(247, 255, 255, 0.9);
+            background: radial-gradient(circle, var(--highlight) 0 1px, transparent 1.5px) 0 0 / 16px 16px;
+            -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            pointer-events: none;
+            opacity: 0.8;
+        }
+
+        .owner-tools {
+            display: flex;
+            gap: 0.4rem;
+        }
+
+        .posts h2 {
+            margin: 0;
+            color: var(--highlight);
+            font-family: "Lucida Console", "Courier New", monospace;
+            font-size: 1.2rem;
+            letter-spacing: 0.08em;
+            text-transform: none;
+        }
+
+        button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            border: 2px outset var(--chrome);
+            border-radius: 0;
+            min-height: 2rem;
+            padding: 0.3rem 0.5rem;
+            background: var(--accent);
+            color: var(--highlight);
+            cursor: pointer;
+            font: 700 0.72rem "Courier New", monospace;
+            text-transform: none;
+            box-shadow: inset 1px 1px 0 rgba(255, 255, 255, 0.8), inset -1px -1px 0 #315f79;
+            text-shadow: none;
+        }
+
+        button[hidden] {
+            display: none;
+        }
+
+        button:hover,
+        button:focus-visible {
+            background: var(--ink);
+        }
+
+        button:active {
+            transform: translateY(1px);
+            border-style: inset;
+            box-shadow: inset 0 2px 4px rgba(5, 52, 89, 0.28);
+        }
+
+        button.secondary {
+            background: var(--line);
+            color: var(--ink);
+            text-shadow: none;
+        }
+
+        .post-editor {
+            margin-bottom: 1rem;
+            padding: 1rem;
+            border: 1px solid rgba(255, 255, 255, 0.9);
+            border-radius: 0;
+            background: rgba(220, 236, 242, 0.58);
+            box-shadow: inset 1px 1px 0 var(--highlight), inset -1px -1px 0 var(--chrome-dark);
+        }
+
+        .post-editor[hidden] {
+            display: none;
+        }
+
+        .post-editor label {
+            display: block;
+            margin-top: 0.7rem;
+            color: var(--accent);
+            font: 700 0.7rem "Courier New", monospace;
+            text-transform: uppercase;
+        }
+
+        .post-editor label:first-child {
+            margin-top: 0;
+        }
+
+        .post-editor input,
+        .post-editor textarea {
+            width: 100%;
+            margin-top: 0.25rem;
+            border: 1px solid #76cddd;
+            border-radius: 0;
+            padding: 0.55rem;
+            background: rgba(255, 255, 255, 0.86);
+            color: var(--ink);
+            font: 1rem "Trebuchet MS", Verdana, sans-serif;
+            box-shadow: inset 2px 2px 3px rgba(5, 52, 89, 0.14), 0 1px 0 var(--highlight);
+        }
+
+        .post-editor textarea {
+            min-height: 5rem;
+            resize: vertical;
+        }
+
+        .post-body-editor {
+            min-height: 8rem;
+            margin-top: 0.25rem;
+            border: 1px solid #76cddd;
+            border-radius: 0;
+            padding: 0.65rem;
+            background: #f8fdff;
+            color: var(--ink);
+            font: 1rem "Trebuchet MS", Verdana, sans-serif;
+            text-transform: none;
+            overflow-wrap: anywhere;
+            word-break: break-word;
+            overflow-x: hidden;
+        }
+
+        .post-body-editor img {
+            display: block;
+            max-width: 100%;
+            height: auto;
+            margin: 0.7rem 0;
+        }
+
+        .post-body-editor:focus {
+            outline: 2px solid var(--aqua);
+            box-shadow: inset 0 2px 4px rgba(5, 52, 89, 0.1), 0 0 0 3px rgba(98, 217, 236, 0.28);
+        }
+
+        .format-toolbar {
+            display: flex;
+            gap: 0.35rem;
+            margin-top: 0.5rem;
+        }
+
+        #insert-image {
+            margin-top: 0.7rem;
+        }
+
+        .format-toolbar button {
+            width: 2rem;
+            min-width: 2rem;
+            height: 2rem;
+            padding: 0;
+        }
+
+        .format-toolbar button:nth-child(1) {
+            font-weight: 900;
+        }
+
+        .format-toolbar button:nth-child(2) {
+            font-style: italic;
+        }
+
+        .format-toolbar button:nth-child(3) {
+            text-decoration: underline;
+        }
+
+        .format-toolbar button:nth-child(4) {
+            text-decoration: line-through;
+        }
+
+        .post-editor input[type="file"] {
+            padding: 0.35rem;
+        }
+
+        .post-editor input[type="checkbox"] {
+            width: auto;
+            margin-right: 0.4rem;
+        }
+
+        .post-image {
+            display: block;
+            width: 100%;
+            max-height: 14rem;
+            margin: 0.8rem 0;
+            object-fit: cover;
+            border: 1px solid var(--line);
+        }
+
+        .editor-actions {
+            display: flex;
+            gap: 0.5rem;
+            margin-top: 0.8rem;
+        }
+
+        .profile-links {
+            display: grid;
+            gap: 0.45rem;
+            margin-top: 1.5rem;
+        }
+
+        .profile-links a {
+            display: block;
+            padding: 0.45rem 0.6rem;
+            border: 1px solid rgba(255, 255, 255, 0.9);
+            border-radius: 0;
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.86), rgba(164, 229, 239, 0.66));
+            font-family: "Courier New", monospace;
+            font-size: 0.78rem;
+            text-decoration: none;
+        }
+
+        .bookshelf {
+            margin-top: 1.5rem;
+            padding-top: 1rem;
+            border-top: 1px solid var(--line);
+        }
+
+        .bookshelf-header,
+        .music-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 0.5rem;
+        }
+
+        .bookshelf h2,
+        .music-player h2 {
+            margin: 0;
+            color: var(--accent);
+            font: 700 0.78rem "Courier New", monospace;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+        }
+
+        .shelf-items {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 0.45rem;
+            margin-top: 0.7rem;
+        }
+
+        .shelf-item {
+            padding: 0.6rem 0.45rem;
+            border: 1px solid rgba(255, 255, 255, 0.9);
+            border-radius: 0;
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.84), rgba(155, 226, 237, 0.58));
+            color: var(--ink);
+            font: 700 0.7rem "Courier New", monospace;
+            text-transform: uppercase;
+            box-shadow: inset 0 1px 0 var(--highlight), 0 2px 4px rgba(5, 52, 89, 0.12);
+        }
+
+        .shelf-item[open] {
+            grid-column: 1 / -1;
+        }
+
+        .shelf-item summary {
+            cursor: pointer;
+            list-style: none;
+        }
+
+        .shelf-item summary::-webkit-details-marker {
+            display: none;
+        }
+
+        .shelf-item p {
+            margin: 0.7rem 0 0;
+            color: var(--muted);
+            font: 0.88rem "Trebuchet MS", Verdana, sans-serif;
+            text-transform: none;
+        }
+
+        .music-player {
+            margin-top: 1.4rem;
+            padding-top: 1rem;
+            border-top: 1px solid var(--line);
+        }
+
+        .music-player audio {
+            width: 100%;
+            margin-top: 0.7rem;
+        }
+
+        .music-player iframe {
+            width: 100%;
+            height: 5rem;
+            margin-top: 0.7rem;
+            border: 1px solid var(--line);
+        }
+
+        .site-editor {
+            margin-top: 0.7rem;
+            padding: 0.7rem;
+            border: 1px solid rgba(255, 255, 255, 0.9);
+            border-radius: 0;
+            background: rgba(220, 236, 242, 0.58);
+        }
+
+        .site-editor[hidden],
+        .music-player p[hidden] {
+            display: none;
+        }
+
+        .site-editor input {
+            width: 100%;
+            margin-top: 0.35rem;
+            border: 1px solid #76cddd;
+            border-radius: 0;
+            padding: 0.45rem;
+            background: #f8fdff;
+        }
+
+        .shelf-row {
+            display: grid;
+            grid-template-columns: 0.6fr 1fr;
+            gap: 0.4rem;
+            margin-top: 0.4rem;
+        }
+
+        .shelf-row textarea {
+            grid-column: 1 / -1;
+            min-height: 7rem;
+            width: 100%;
+            border: 1px solid var(--line);
+            padding: 0.55rem;
+            resize: vertical;
+        }
+
+        .note-widget {
+            position: fixed;
+            right: 1rem;
+            bottom: 1rem;
+            z-index: 5;
+            width: min(20rem, calc(100vw - 2rem));
+            padding: 0.8rem;
+            border: 1px solid rgba(255, 255, 255, 0.95);
+            border-radius: 0;
+            background: rgba(239, 253, 255, 0.72);
+            box-shadow: inset 0 1px 0 var(--highlight), 0 0.6rem 1.5rem rgba(5, 52, 89, 0.3);
+            backdrop-filter: blur(8px);
+        }
+
+        .note-widget summary {
+            cursor: pointer;
+            color: var(--accent);
+            font: 700 0.75rem "Courier New", monospace;
+            text-transform: uppercase;
+        }
+
+        .note-form textarea {
+            width: 100%;
+            min-height: 4rem;
+            margin-top: 0.6rem;
+            border: 1px solid #76cddd;
+            border-radius: 0;
+            padding: 0.5rem;
+            background: rgba(255, 255, 255, 0.9);
+            resize: vertical;
+        }
+
+        .note-form input {
+            width: 100%;
+            margin-top: 0.6rem;
+            border: 1px solid #76cddd;
+            border-radius: 0;
+            padding: 0.5rem;
+            background: rgba(255, 255, 255, 0.9);
+        }
+
+        .visitor-note {
+            margin-top: 0.7rem;
+            padding-top: 0.7rem;
+            border-top: 1px dashed var(--line);
+            color: var(--muted);
+            font-size: 0.85rem;
+        }
+
+        .visitor-note-meta {
+            display: block;
+            margin-bottom: 0.25rem;
+            color: var(--accent);
+            font: 700 0.68rem "Courier New", monospace;
+            text-transform: uppercase;
+        }
+
+        .visitor-note:first-child {
+            border-top: 0;
+        }
+
+        .visitor-note button {
+            float: right;
+        }
+
+        .notes-navigation {
+            display: flex;
+            justify-content: space-between;
+            gap: 0.4rem;
+            margin-top: 0.7rem;
+        }
+
+        .notes-navigation[hidden] {
+            display: none;
+        }
+
+        .notes-navigation button {
+            min-height: 1.5rem;
+            padding: 0.15rem 0.35rem;
+            font-size: 0.62rem;
+        }
+
+        .link-editor {
+            margin-top: 0.7rem;
+        }
+
+        .link-row {
+            display: grid;
+            grid-template-columns: 0.7fr 1.3fr;
+            gap: 0.4rem;
+            margin-top: 0.4rem;
+        }
+
+        .link-row input {
+            min-width: 0;
+            border: 1px solid var(--line);
+            padding: 0.45rem;
+        }
+
+        .link-row button,
+        .post-actions .danger {
+            width: 2rem;
+            min-width: 2rem;
+            height: 2rem;
+            padding: 0;
+        }
+
+        .link-row {
+            grid-template-columns: 0.7fr 1.3fr 2rem;
+        }
+
+        .post {
+            padding: 0.75rem 0;
+            border-top: 1px dashed var(--line);
+        }
+
+        .post summary {
+            cursor: pointer;
+            list-style: none;
+        }
+
+        .post summary::-webkit-details-marker {
+            display: none;
+        }
+
+        .post summary::after {
+            content: " +";
+            color: var(--accent);
+            font-family: "Courier New", monospace;
+        }
+
+        .post[open] summary::after {
+            content: " -";
+        }
+
+        .post:first-of-type {
+            border-top: 0;
+        }
+
+        .post h3 {
+            margin: 0 0 0.25rem;
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 1.5rem;
+            text-transform: none;
+            overflow-wrap: anywhere;
+            word-break: break-word;
+        }
+
+        .post time {
+            color: var(--accent);
+            font-family: "Courier New", monospace;
+            font-size: 0.72rem;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        .post p {
+            margin: 0.65rem 0 0;
+            color: var(--muted);
+            text-transform: none;
+        }
+
+        .post-content img {
+            display: block;
+            max-width: 100%;
+            max-height: 20rem;
+            margin: 0.8rem 0;
+            object-fit: contain;
+            border: 1px solid var(--line);
+        }
+
+        .post-content {
+            max-width: 100%;
+            overflow-wrap: anywhere;
+            word-break: break-word;
+            overflow-x: hidden;
+        }
+
+        .post-actions {
+            margin-top: 0.75rem;
+        }
+
+        .danger {
+            background: #9b3047;
+        }
+
+        .post-navigation {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px dashed var(--line);
+        }
+
+        .post-navigation[hidden] {
+            display: none;
+        }
+
+        @media (max-width: 50rem) {
+            body {
+                padding: 1rem;
+            }
+
+            .site-shell {
+                min-height: auto;
+                grid-template-columns: 1fr;
+                gap: 2.5rem;
+            }
+
+            main {
+                padding: 2.5rem 1.25rem;
+            }
+
+            .posts {
+                width: 100%;
+            }
+
+            .shelf-items {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="site-shell">
+        <main>
+            <p>Hello and welcome!</p>
+            <h1>Hellooo!!! I'm Ocean or Finn. Either works :P</h1>
+            <p>
+                I do YouTube stuff. Check out my
+                <a href="https://www.youtube.com/@0cean.mp44">YouTube channel</a>.
+                I swear I'm trying to post, haha. I'm American.. boo.. also i use any pronouns
+            </p>
+            <nav class="profile-links" id="profile-links" aria-label="Other links"></nav>
+            <button id="edit-links" class="secondary" type="button" hidden>edit links</button>
+            <div id="link-editor" class="link-editor" hidden>
+                <div id="link-rows"></div>
+                <div class="editor-actions">
+                    <button id="add-link" type="button">+ link</button>
+                    <button id="save-links" type="button">save links</button>
+                </div>
+            </div>
+            <section class="bookshelf" aria-labelledby="shelf-title">
+                <div class="bookshelf-header">
+                    <h2 id="shelf-title">my shelf</h2>
+                    <button id="edit-shelf" class="secondary" type="button" hidden>edit</button>
+                </div>
+                <div class="shelf-items" id="shelf-items"></div>
+                <form class="site-editor" id="shelf-editor" hidden>
+                    <div id="shelf-rows"></div>
+                    <div class="editor-actions">
+                        <button id="add-shelf-item" type="button">+ item</button>
+                        <button type="submit">save shelf</button>
+                    </div>
+                </form>
+            </section>
+            <section class="music-player" aria-labelledby="music-title">
+                <div class="music-header">
+                    <h2 id="music-title">now playing</h2>
+                    <button id="edit-music" class="secondary" type="button" hidden>edit</button>
+                </div>
+                <p id="music-empty">No soundtrack added yet.</p>
+                <div id="music-content"></div>
+                <form class="site-editor" id="music-editor" hidden>
+                    <input id="music-name" placeholder="song or playlist name" required>
+                    <input id="music-url" type="url" placeholder="YouTube or Spotify URL">
+                    <div class="editor-actions"><button type="submit">save music</button></div>
+                </form>
+            </section>
+        </main>
+
+        <section class="posts" aria-labelledby="posts-title">
+            <div class="posts-header">
+                <h2 id="posts-title">blog / updates</h2>
+                <div class="owner-tools">
+                    <button id="login" type="button">owner login</button>
+                    <button id="logout" class="secondary" type="button" hidden>log out</button>
+                    <button id="new-post" type="button" hidden>+ new post</button>
+                </div>
+            </div>
+            <form class="post-editor" id="post-editor" hidden>
+                <label>Title <input id="post-title" name="title" required></label>
+                <label>Date <input id="post-date" name="date" type="date" required></label>
+                <label>Time <input id="post-time" name="time" type="time" required></label>
+                <label>Post
+                    <div id="post-body" class="post-body-editor" contenteditable="true" role="textbox" aria-multiline="true"></div>
+                </label>
+                <div class="format-toolbar" aria-label="Text formatting">
+                    <button type="button" data-format="bold" title="Bold">B</button>
+                    <button type="button" data-format="italic" title="Italic">I</button>
+                    <button type="button" data-format="underline" title="Underline">U</button>
+                    <button type="button" data-format="strikeThrough" title="Strikethrough">S</button>
+                </div>
+                <input id="inline-image" type="file" accept="image/*" hidden>
+                <button id="insert-image" class="secondary" type="button">insert image here</button>
+                <label>Image <input id="post-image" name="image" type="file" accept="image/*"></label>
+                <label><input id="post-pinned" name="pinned" type="checkbox"> pin this post</label>
+                <div class="editor-actions">
+                    <button type="submit">save post</button>
+                    <button id="cancel-post" class="secondary" type="button">cancel</button>
+                </div>
+            </form>
+            <div id="posts-list"></div>
+            <div class="post-navigation" id="post-navigation" hidden>
+                <button id="previous-posts" type="button">&#8592; newer</button>
+                <button id="next-posts" type="button">older &#8594;</button>
+            </div>
+        </section>
+    </div>
+    <details class="note-widget" open>
+        <summary>leave a little note</summary>
+        <form class="note-form" id="note-form">
+            <input id="note-author" maxlength="40" placeholder="your name" required>
+            <textarea id="note-text" maxlength="280" placeholder="say hi..." required></textarea>
+            <button type="submit">post note</button>
+        </form>
+        <div id="visitor-notes"></div>
+        <div class="notes-navigation" id="notes-navigation" hidden>
+            <button id="previous-notes" type="button">&#8592; newer</button>
+            <button id="next-notes" type="button">older &#8594;</button>
+        </div>
+    </details>
+    <script>
+        const editor = document.querySelector("#post-editor");
+        const postsList = document.querySelector("#posts-list");
+        const titleInput = document.querySelector("#post-title");
+        const dateInput = document.querySelector("#post-date");
+        const timeInput = document.querySelector("#post-time");
+        const bodyInput = document.querySelector("#post-body");
+        const imageInput = document.querySelector("#post-image");
+        const pinnedInput = document.querySelector("#post-pinned");
+        const loginButton = document.querySelector("#login");
+        const logoutButton = document.querySelector("#logout");
+        const newPostButton = document.querySelector("#new-post");
+        const links = document.querySelector("#profile-links");
+        const linkEditor = document.querySelector("#link-editor");
+        const linkRows = document.querySelector("#link-rows");
+        const shelfItems = document.querySelector("#shelf-items");
+        const shelfEditor = document.querySelector("#shelf-editor");
+        const shelfRows = document.querySelector("#shelf-rows");
+        const musicContent = document.querySelector("#music-content");
+        const musicEmpty = document.querySelector("#music-empty");
+        const musicEditor = document.querySelector("#music-editor");
+        const noteForm = document.querySelector("#note-form");
+        const noteAuthor = document.querySelector("#note-author");
+        const noteText = document.querySelector("#note-text");
+        const visitorNotes = document.querySelector("#visitor-notes");
+        let posts = [];
+        let profileLinks = [];
+        let shelf = [];
+        let music = {};
+        let notes = [];
+        let owner = false;
+        let notePage = 0;
+        const notesPerPage = 4;
+        let editingId = null;
+        let postPage = 0;
+        const postsPerPage = 3;
+
+        async function request(url, options = {}) {
+            const response = await fetch(url, { headers: { "content-type": "application/json" }, ...options });
+            const result = await response.json();
+            if (!response.ok) throw new Error(result.error || "Something went wrong.");
+            return result;
+        }
+
+        function formatDate(date) {
+            const [year, month, day] = date.split("-");
+            return `${month}.${day}.${year.slice(-2)}`;
+        }
+
+        function formatTime(timestamp, date) {
+            const time = (timestamp || `${date}T12:00`).split("T")[1]?.slice(0, 5) || "12:00";
+            const [hours, minutes] = time.split(":").map(Number);
+            const suffix = hours >= 12 ? "PM" : "AM";
+            return `${hours % 12 || 12}:${String(minutes).padStart(2, "0")} ${suffix}`;
+        }
+
+        function renderLinks() {
+            links.replaceChildren(...profileLinks.map((link) => {
+                const anchor = document.createElement("a");
+                anchor.href = link.url;
+                anchor.target = "_blank";
+                anchor.rel = "noreferrer";
+                anchor.textContent = link.label;
+                return anchor;
+            }));
+        }
+
+        function renderShelf() {
+            shelfItems.replaceChildren(...shelf.map((item) => {
+                const details = document.createElement("details");
+                const summary = document.createElement("summary");
+                const note = document.createElement("p");
+                details.className = "shelf-item";
+                summary.textContent = `${item.type} // ${item.title}`;
+                note.textContent = item.note;
+                details.append(summary, note);
+                return details;
+            }));
+        }
+
+        function renderMusic() {
+            musicContent.replaceChildren();
+            musicEmpty.hidden = Boolean(music.url);
+            if (!music.url) return;
+            const title = document.createElement("p");
+            title.textContent = music.title;
+            musicContent.append(title);
+            const frame = document.createElement("iframe");
+            frame.allow = "autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture";
+            frame.title = music.title;
+            if (/youtu\.be|youtube\.com/i.test(music.url)) {
+                const videoId = music.url.match(/(?:v=|youtu\.be\/|embed\/)([^&?/]+)/i)?.[1];
+                if (videoId) frame.src = `https://www.youtube.com/embed/${videoId}`;
+            } else {
+                frame.src = music.url.replace("open.spotify.com/", "open.spotify.com/embed/");
+            }
+            if (frame.src) musicContent.append(frame);
+        }
+
+        function renderNotes() {
+            const pageCount = Math.ceil(notes.length / notesPerPage);
+            notePage = Math.min(notePage, Math.max(0, pageCount - 1));
+            const visibleNotes = notes.slice(notePage * notesPerPage, (notePage + 1) * notesPerPage);
+            visitorNotes.replaceChildren(...visibleNotes.map((note) => {
+                const item = document.createElement("div");
+                const meta = document.createElement("span");
+                item.className = "visitor-note";
+                meta.className = "visitor-note-meta";
+                meta.textContent = `${note.author || "anonymous"} // ${new Date(note.createdAt).toLocaleString()}`;
+                item.append(meta, document.createTextNode(note.text));
+                if (owner) {
+                    const deleteButton = document.createElement("button");
+                    deleteButton.className = "danger";
+                    deleteButton.textContent = "🗑";
+                    deleteButton.title = "Delete note";
+                    deleteButton.addEventListener("click", async () => {
+                        await request(`/api/notes/${note.id}`, { method: "DELETE" });
+                        await loadPage();
+                    });
+                    item.append(deleteButton);
+                }
+                return item;
+            }));
+            const navigation = document.querySelector("#notes-navigation");
+            navigation.hidden = pageCount < 2;
+            document.querySelector("#previous-notes").disabled = notePage === 0;
+            document.querySelector("#next-notes").disabled = notePage >= pageCount - 1;
+        }
+
+        function renderShelfEditor() {
+            shelfRows.replaceChildren(...shelf.map((item) => {
+                const row = document.createElement("div");
+                row.className = "link-row";
+                row.className = "shelf-row";
+                row.innerHTML = `<input aria-label="Shelf type" value="${item.type}"><input aria-label="Shelf title" value="${item.title}"><textarea aria-label="Shelf description">${item.note}</textarea>`;
+                return row;
+            }));
+        }
+
+        function renderPosts() {
+            const pageCount = Math.ceil(posts.length / postsPerPage);
+            postPage = Math.min(postPage, Math.max(0, pageCount - 1));
+            const visiblePosts = posts.slice(postPage * postsPerPage, (postPage + 1) * postsPerPage);
+            postsList.replaceChildren(...visiblePosts.map((post) => {
+                const article = document.createElement("details");
+                const summary = document.createElement("summary");
+                const date = document.createElement("time");
+                const title = document.createElement("h3");
+                const content = document.createElement("div");
+                const actions = document.createElement("div");
+                const editButton = document.createElement("button");
+                const deleteButton = document.createElement("button");
+
+                article.className = "post";
+                date.dateTime = post.publishedAt || `${post.date}T12:00`;
+                date.textContent = `${formatDate(post.date)} // ${formatTime(post.publishedAt, post.date)}`;
+                title.textContent = post.title;
+                summary.append(date, title);
+                content.className = "post-content";
+                content.innerHTML = post.body;
+                if (post.image) {
+                    const image = document.createElement("img");
+                    image.src = post.image;
+                    image.alt = "";
+                    content.prepend(image);
+                }
+                actions.className = "post-actions";
+                editButton.type = "button";
+                editButton.textContent = "edit";
+                editButton.addEventListener("click", () => openEditor(post));
+                deleteButton.type = "button";
+                deleteButton.className = "danger";
+                deleteButton.textContent = "🗑";
+                deleteButton.title = "Delete post";
+                deleteButton.setAttribute("aria-label", `Delete ${post.title}`);
+                deleteButton.addEventListener("click", async () => {
+                    if (!window.confirm(`Delete “${post.title}”?`)) return;
+                    await request(`/api/posts/${post.id}`, { method: "DELETE" });
+                    await loadPage();
+                });
+                actions.append(editButton, deleteButton);
+                article.append(summary, content, actions);
+                return article;
+            }));
+            const navigation = document.querySelector("#post-navigation");
+            navigation.hidden = pageCount < 2;
+            document.querySelector("#previous-posts").disabled = postPage === 0;
+            document.querySelector("#next-posts").disabled = postPage >= pageCount - 1;
+        }
+
+        function openEditor(post) {
+            editingId = post ? post.id : null;
+            titleInput.value = post ? post.title : "";
+            dateInput.value = post ? post.date : new Date().toISOString().slice(0, 10);
+            timeInput.value = post?.publishedAt?.split("T")[1]?.slice(0, 5) || "12:00";
+            bodyInput.innerHTML = post ? post.body : "";
+            imageInput.value = "";
+            pinnedInput.checked = post ? post.pinned : false;
+            editor.hidden = false;
+            titleInput.focus();
+        }
+
+        function renderLinkEditor() {
+            linkRows.replaceChildren(...profileLinks.map((link) => {
+                const row = document.createElement("div");
+                const labelInput = document.createElement("input");
+                const urlInput = document.createElement("input");
+                row.className = "link-row";
+                labelInput.setAttribute("aria-label", "Link label");
+                labelInput.value = link.label;
+                urlInput.setAttribute("aria-label", "Link URL");
+                urlInput.type = "url";
+                urlInput.value = link.url;
+                const deleteButton = document.createElement("button");
+                deleteButton.type = "button";
+                deleteButton.className = "danger";
+                deleteButton.textContent = "🗑";
+                deleteButton.title = "Delete link";
+                deleteButton.setAttribute("aria-label", `Delete ${link.label} link`);
+                deleteButton.addEventListener("click", () => {
+                    profileLinks = profileLinks.filter((savedLink) => savedLink.id !== link.id);
+                    renderLinkEditor();
+                });
+                row.append(labelInput, urlInput, deleteButton);
+                return row;
+            }));
+        }
+
+        async function loadPage() {
+            const data = await request("/api/site");
+            posts = data.posts;
+            profileLinks = data.links;
+            shelf = data.bookshelf;
+            music = data.music;
+            notes = data.notes;
+            renderPosts();
+            renderLinks();
+            renderShelf();
+            renderMusic();
+            const session = await request("/api/session");
+            owner = session.owner;
+            loginButton.hidden = owner;
+            logoutButton.hidden = !session.owner;
+            newPostButton.hidden = !owner;
+            document.querySelector("#edit-links").hidden = !owner;
+            document.querySelector("#edit-shelf").hidden = !owner;
+            document.querySelector("#edit-music").hidden = !owner;
+            renderNotes();
+        }
+
+        loginButton.addEventListener("click", async () => {
+            const password = window.prompt("Owner password:");
+            if (!password) return;
+            try {
+                await request("/api/login", { method: "POST", body: JSON.stringify({ password }) });
+                await loadPage();
+            } catch (error) {
+                window.alert(error.message);
+            }
+        });
+
+        logoutButton.addEventListener("click", async () => {
+            await request("/api/logout", { method: "POST" });
+            editor.hidden = true;
+            linkEditor.hidden = true;
+            document.querySelector("#edit-links").hidden = true;
+            await loadPage();
+        });
+
+        newPostButton.addEventListener("click", () => openEditor());
+
+        document.querySelector("#edit-shelf").addEventListener("click", () => {
+            renderShelfEditor();
+            shelfEditor.hidden = !shelfEditor.hidden;
+        });
+        document.querySelector("#add-shelf-item").addEventListener("click", () => {
+            shelf.push({ type: "media", title: "new favorite", note: "describe it here" });
+            renderShelfEditor();
+        });
+        shelfEditor.addEventListener("submit", async (event) => {
+            event.preventDefault();
+            shelf = [...shelfRows.children].map((row, index) => ({ id: shelf[index]?.id, type: row.children[0].value, title: row.children[1].value, note: row.children[2].value }));
+            await request("/api/bookshelf", { method: "PUT", body: JSON.stringify({ items: shelf }) });
+            shelfEditor.hidden = true;
+            await loadPage();
+        });
+
+        document.querySelector("#edit-music").addEventListener("click", () => {
+            document.querySelector("#music-name").value = music.title || "";
+            document.querySelector("#music-url").value = music.url || "";
+            musicEditor.hidden = !musicEditor.hidden;
+        });
+        musicEditor.addEventListener("submit", async (event) => {
+            event.preventDefault();
+            await request("/api/music", { method: "PUT", body: JSON.stringify({ title: document.querySelector("#music-name").value, url: document.querySelector("#music-url").value }) });
+            musicEditor.hidden = true;
+            await loadPage();
+        });
+
+        noteForm.addEventListener("submit", async (event) => {
+            event.preventDefault();
+            await request("/api/notes", { method: "POST", body: JSON.stringify({ author: noteAuthor.value, text: noteText.value }) });
+            noteAuthor.value = "";
+            noteText.value = "";
+            notePage = 0;
+            await loadPage();
+        });
+        document.querySelector("#previous-notes").addEventListener("click", () => {
+            notePage -= 1;
+            renderNotes();
+        });
+        document.querySelector("#next-notes").addEventListener("click", () => {
+            notePage += 1;
+            renderNotes();
+        });
+        document.querySelectorAll("[data-format]").forEach((button) => {
+            button.addEventListener("mousedown", (event) => event.preventDefault());
+            button.addEventListener("click", () => {
+                bodyInput.focus();
+                document.execCommand(button.dataset.format, false);
+            });
+        });
+        document.querySelector("#insert-image").addEventListener("click", () => document.querySelector("#inline-image").click());
+        document.querySelector("#inline-image").addEventListener("change", (event) => {
+            const file = event.target.files[0];
+            if (!file) return;
+            const reader = new FileReader();
+            reader.onload = () => {
+                document.execCommand("insertHTML", false, `<img src="${reader.result}" alt="">`);
+                event.target.value = "";
+            };
+            reader.readAsDataURL(file);
+        });
+        document.querySelector("#previous-posts").addEventListener("click", () => {
+            postPage -= 1;
+            renderPosts();
+        });
+        document.querySelector("#next-posts").addEventListener("click", () => {
+            postPage += 1;
+            renderPosts();
+        });
+        document.querySelector("#cancel-post").addEventListener("click", () => {
+            editor.hidden = true;
+        });
+        editor.addEventListener("submit", async (event) => {
+            event.preventDefault();
+            let image = editingId ? posts.find((post) => post.id === editingId)?.image || "" : "";
+            if (imageInput.files[0]) {
+                image = await new Promise((resolve) => {
+                    const reader = new FileReader();
+                    reader.onload = () => resolve(reader.result);
+                    reader.readAsDataURL(imageInput.files[0]);
+                });
+            }
+            const post = {
+                title: titleInput.value.trim(),
+                date: dateInput.value,
+                publishedAt: `${dateInput.value}T${timeInput.value}`,
+                body: bodyInput.innerHTML.trim(),
+                image,
+                pinned: pinnedInput.checked
+            };
+            try {
+                await request(editingId ? `/api/posts/${editingId}` : "/api/posts", { method: editingId ? "PUT" : "POST", body: JSON.stringify(post) });
+                editor.hidden = true;
+                await loadPage();
+            } catch (error) {
+                window.alert(error.message);
+            }
+        });
+
+        document.querySelector("#edit-links").addEventListener("click", () => {
+            renderLinkEditor();
+            linkEditor.hidden = !linkEditor.hidden;
+        });
+        document.querySelector("#add-link").addEventListener("click", () => {
+            profileLinks.push({ label: "New link", url: "https://" });
+            renderLinkEditor();
+        });
+        document.querySelector("#save-links").addEventListener("click", async () => {
+            const rows = [...linkRows.children];
+            profileLinks = rows.map((row, index) => ({ id: profileLinks[index]?.id || `link-${Date.now()}-${index}`, label: row.children[0].value.trim(), url: row.children[1].value.trim() }));
+            await request("/api/links", { method: "PUT", body: JSON.stringify({ links: profileLinks }) });
+            renderLinks();
+            linkEditor.hidden = true;
+        });
+
+        loadPage().catch((error) => { postsList.textContent = error.message; });
+    </script>
+</body>
+</html>
