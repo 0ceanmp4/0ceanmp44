@@ -94,7 +94,7 @@ const server = http.createServer(async (request, response) => {
         const data = readData();
         const author = String(body.author || "anonymous").trim().slice(0, 40) || "anonymous";
         const note = { id: `note-${Date.now()}`, author, text, createdAt: new Date().toISOString() };
-        data.notes = [note, ...(data.notes || [])].slice(0, 50);
+        data.notes = [note, ...(data.notes || [])];
         writeData(data);
         return send(response, 201, note);
     }
